@@ -1,0 +1,132 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #b8eaf7, #8f9cd6);
+  font-family: 'Arial', sans-serif;
+  color: #f7f4f4;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 9, 9, 0.3);
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.player-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.player-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.player-button.active {
+  background-color: rgba(16, 75, 202, 0.5);
+  color: rgb(245, 238, 238);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(128, 126, 126, 0.116);
+}
+
+.dialog-content {
+  background-color: rgb(98, 152, 184);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid rgba(80, 76, 76, 0.3);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
